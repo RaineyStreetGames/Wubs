@@ -20,7 +20,7 @@ TagManager:
   - Playground
   - Wall
   - Objects
-  - 
+  - Forground
   - 
   - 
   - 
@@ -52,4 +52,7 @@ TagManager:
     locked: 0
   - name: Wubs
     uniqueID: 1271621431
+    locked: 0
+  - name: Foreground
+    uniqueID: 4272242461
     locked: 0
