@@ -7826,6 +7826,61 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1984566440
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1984566442}
+  - component: {fileID: 1984566441}
+  m_Layer: 0
+  m_Name: CloudController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1984566441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1984566440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e9775dd24b364383bfd13dcce6d8864, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cloud0: {fileID: 770621341734134777, guid: fbeb1b2c4f1784abb8007f590922f95b, type: 3}
+  cloud1: {fileID: 5486167192009383578, guid: 76ce31f6ef83747acaeeee8a2aea89f0, type: 3}
+  cloud2: {fileID: 3173305138531552707, guid: 25281a8e228a747669a80cd9a626a958, type: 3}
+  cloud3: {fileID: 1576959744018413397, guid: 920c9443e53314e2fa455e782b672c4b, type: 3}
+  cloud4: {fileID: 5177224080766633737, guid: 815d2d10668ea4d889bda7fc78ea29c9, type: 3}
+  cloud5: {fileID: 459601889401393185, guid: 877df696876d64571a86917818153ecd, type: 3}
+  cloud6: {fileID: 5074531195467000390, guid: c47ebd4de2e0b488e86b1a8b74015b1e, type: 3}
+  cloud7: {fileID: 2371615078265778929, guid: e8464631d82a84b1e8309cfe43c4783f, type: 3}
+  cloud8: {fileID: 4385096480007005327, guid: 824f9d7bbcb7843eba62e8c3a59d81d9, type: 3}
+  cloudCluster: {fileID: 1995532456937368690, guid: 4ab09c4a06c8449b9bb28c2e41307d17,
+    type: 3}
+  count: 20
+--- !u!4 &1984566442
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1984566440}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2016309329
 GameObject:
   m_ObjectHideFlags: 0

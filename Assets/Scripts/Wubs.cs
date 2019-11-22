@@ -97,7 +97,7 @@ public class Wubs : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("collision: " + gameObject.name + " hit " + collision.collider.name);
+        // Debug.Log("collision: " + gameObject.name + " hit " + collision.collider.name);
         wubSource.clip = wubList[Random.Range(0, wubList.Count)];
         PlaySource(wubSource, 10.0f);
 
