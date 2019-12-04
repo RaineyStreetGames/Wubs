@@ -14,10 +14,9 @@ public class CloudController : MonoBehaviour
     public GameObject cloud5;
     public GameObject cloud6;
     public GameObject cloud7;
-    public GameObject cloud8;
     public GameObject cloudCluster;
     public static int minX = -175;
-    public static int maxX = 170;
+    public static int maxX = 180;
     public static int minY = 40;
     public static int maxY = 75;
     public static float direction = 1.0f;
@@ -40,7 +39,6 @@ public class CloudController : MonoBehaviour
         cloudList.Add(cloud5);
         cloudList.Add(cloud6);
         cloudList.Add(cloud7);
-        cloudList.Add(cloud8);
 
 
         clusters = new List<GameObject>();

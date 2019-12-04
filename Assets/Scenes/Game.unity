@@ -769,7 +769,7 @@ Transform:
   m_GameObject: {fileID: 180221128}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 90, z: 0}
-  m_LocalScale: {x: 25, y: 25, z: 1}
+  m_LocalScale: {x: 30, y: 25, z: 1}
   m_Children: []
   m_Father: {fileID: 327746147}
   m_RootOrder: 0
@@ -2203,8 +2203,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 466951530}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 140.3, z: 0}
-  m_LocalScale: {x: 25, y: 25, z: 1}
+  m_LocalPosition: {x: 0, y: 168, z: 0}
+  m_LocalScale: {x: 30, y: 30, z: 1}
   m_Children: []
   m_Father: {fileID: 327746147}
   m_RootOrder: 2
@@ -3872,6 +3872,55 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.67, y: 0.59}
   m_EdgeRadius: 0
+--- !u!1 &890783290
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 890783292}
+  - component: {fileID: 890783291}
+  m_Layer: 0
+  m_Name: StarController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &890783291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 890783290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 151cbbbb8792d45aeb2e6c3da54648f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  starCluster: {fileID: 9132462215232595079, guid: 5c1af43aa013c41d5b3ab11870d7cee9,
+    type: 3}
+  stars: []
+  objectLayer:
+    serializedVersion: 2
+    m_Bits: 2048
+--- !u!4 &890783292
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 890783290}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -146.11, y: 226.7, z: -38.021324}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &909991306
 GameObject:
   m_ObjectHideFlags: 0
@@ -6148,7 +6197,7 @@ GameObject:
   - component: {fileID: 1433906535}
   - component: {fileID: 1433906536}
   - component: {fileID: 1433906537}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Moon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6729,8 +6778,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1596582277}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 140.3, z: 0}
-  m_LocalScale: {x: 25, y: 25, z: 1}
+  m_LocalPosition: {x: -0, y: 168, z: 0}
+  m_LocalScale: {x: 30, y: 30, z: 1}
   m_Children: []
   m_Father: {fileID: 327746147}
   m_RootOrder: 1
@@ -6809,7 +6858,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.48}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -6820,7 +6869,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 13.34, y: 7.38}
+  m_Size: {x: 13.34, y: 6.51}
   m_EdgeRadius: 0
 --- !u!1 &1646012018
 GameObject:
@@ -7863,10 +7912,9 @@ MonoBehaviour:
   cloud5: {fileID: 459601889401393185, guid: 877df696876d64571a86917818153ecd, type: 3}
   cloud6: {fileID: 5074531195467000390, guid: c47ebd4de2e0b488e86b1a8b74015b1e, type: 3}
   cloud7: {fileID: 2371615078265778929, guid: e8464631d82a84b1e8309cfe43c4783f, type: 3}
-  cloud8: {fileID: 4385096480007005327, guid: 824f9d7bbcb7843eba62e8c3a59d81d9, type: 3}
   cloudCluster: {fileID: 1995532456937368690, guid: 4ab09c4a06c8449b9bb28c2e41307d17,
     type: 3}
-  count: 20
+  clusters: []
 --- !u!4 &1984566442
 Transform:
   m_ObjectHideFlags: 0

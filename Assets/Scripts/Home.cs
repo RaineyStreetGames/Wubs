@@ -48,7 +48,7 @@ public class Home : MonoBehaviour
             if (!other.IsTouching(Room.GetComponent<Collider2D>()))
             {
                 displayed = true;
-                cam.SetSize(14);
+                cam.SetSize(18);
             }
         }
     }

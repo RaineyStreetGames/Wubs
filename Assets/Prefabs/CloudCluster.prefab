@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6782598554954500770}
   - component: {fileID: 2734761165269699130}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: CloudCluster
   m_TagString: Untagged
   m_Icon: {fileID: 0}

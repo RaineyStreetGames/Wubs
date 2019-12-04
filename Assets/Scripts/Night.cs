@@ -16,7 +16,7 @@ public class Night : MonoBehaviour
     {
         if (other.tag == "Wubs")
         {
-            cam.SetSize(18);
+            cam.SetSize(26);
         }
     }
 
@@ -24,7 +24,7 @@ public class Night : MonoBehaviour
     {
         if (other.tag == "Wubs")
         {
-            cam.SetSize(14);
+            cam.SetSize(18);
         }
     }
 }
