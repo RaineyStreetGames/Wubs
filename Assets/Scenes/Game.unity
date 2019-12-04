@@ -1487,7 +1487,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 280}
+  m_Offset: {x: 0, y: 325}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -3882,13 +3882,12 @@ GameObject:
   m_Component:
   - component: {fileID: 890783292}
   - component: {fileID: 890783291}
-  - component: {fileID: 890783293}
   m_Layer: 0
   m_Name: StarController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!114 &890783291
 MonoBehaviour:
@@ -3904,6 +3903,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   starCluster: {fileID: 9132462215232595079, guid: 5c1af43aa013c41d5b3ab11870d7cee9,
     type: 3}
+  minX: -160
+  maxX: 180
+  minY: 115
+  maxY: 270
   star0: {fileID: 8300000, guid: 2a04c47b20b144f36bf0c9cd6b261beb, type: 3}
   star1: {fileID: 8300000, guid: 56a1007df28c641249a6f0054a7874ce, type: 3}
   star2: {fileID: 8300000, guid: 581f83ecc43804db09add07676cd719c, type: 3}
@@ -3925,102 +3928,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &890783293
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 890783290}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 0
-  m_Volume: 0.2
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!1 &909991306
 GameObject:
   m_ObjectHideFlags: 0
@@ -6019,7 +5926,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1412489325}
   - component: {fileID: 1412489324}
-  - component: {fileID: 1412489323}
   - component: {fileID: 1412489322}
   - component: {fileID: 1412489321}
   - component: {fileID: 1412489326}
@@ -6039,14 +5945,6 @@ AudioListener:
   m_GameObject: {fileID: 1412489320}
   m_Enabled: 1
 --- !u!124 &1412489322
-Behaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1412489320}
-  m_Enabled: 1
---- !u!92 &1412489323
 Behaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6125,7 +6023,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 425134091}
   minY: 0
-  maxY: 315
+  maxY: 275
   minX: -165
   maxX: 165
 --- !u!1 &1422008154

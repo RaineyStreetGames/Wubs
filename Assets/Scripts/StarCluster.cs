@@ -11,10 +11,12 @@ public class StarCluster : MonoBehaviour
     public GameObject starDust;
 
     private List<GameObject> stars;
+    private AudioSource starSource;
     private bool collected;
 
     void Start()
     {
+        starSource = GetComponent<AudioSource>();
         stars = new List<GameObject>();
         var glow = Instantiate(starLight, transform.position, Quaternion.Euler(0, 0, 0), transform);
         stars.Add(glow);
@@ -39,12 +41,12 @@ public class StarCluster : MonoBehaviour
 
             if (!collected)
             {
-                StarController.CollectStar();
+                StarController.CollectStar(starSource);
                 collected = true;
             }
 
-            Instantiate(starDust, transform.position, Quaternion.Euler(0, 0, 0), transform);
-            Destroy(this.gameObject, 1.0f);
+            Instantiate(starDust, transform.position, Quaternion.Euler(0, 0, 0), transform.parent);
+            Destroy(this.gameObject, 3.75f);
         }
     }
 
