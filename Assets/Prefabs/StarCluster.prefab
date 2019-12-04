@@ -48,6 +48,7 @@ MonoBehaviour:
     type: 3}
   starLight: {fileID: 4945640352695474570, guid: 0bf383be65bef4dbdbff77ab456be6f4,
     type: 3}
+  starDust: {fileID: 642167874263994244, guid: 259d839a1b0c34f4db33631fb90b3c3f, type: 3}
 --- !u!58 &6609071290273997942
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -58,7 +59,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}

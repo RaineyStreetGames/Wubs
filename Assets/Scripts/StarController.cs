@@ -11,15 +11,24 @@ public class StarController : MonoBehaviour
     public static int maxX = 180;
     public static int minY = 115;
     public static int maxY = 225;
-    private int count = 22;
-
-    public List<GameObject> stars;
+    public AudioClip star0;
+    public AudioClip star1;
+    public AudioClip star2;
+    public AudioClip star3;
     public LayerMask objectLayer;
+
+    private int count = 22;
+    private static int starIndex = 0;
+    private static List<AudioClip> sounds;
+    private List<GameObject> stars;
+    private static AudioSource starSource;
 
     // Start is called before the first frame update
     void Start()
     {
         stars = new List<GameObject>();
+        sounds = new List<AudioClip>() { star0, star1, star2, star3 };
+        starSource = GetComponent<AudioSource>();
 
         for (int i = 0; i < count; i++)
         {
@@ -50,5 +59,15 @@ public class StarController : MonoBehaviour
         }
         // var cloudS = Random.Range(0, 2);
         // cloud.transform.localScale += new Vector3(cloudS, cloudS, cloudS);
+    }
+
+    public static void CollectStar()
+    {
+        // if (!starSource.isPlaying)
+        // {
+        starSource.clip = sounds[starIndex];
+        starSource.Play();
+        starIndex = starIndex == (sounds.Count - 1) ? 0 : starIndex + 1;
+        // }
     }
 }

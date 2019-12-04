@@ -8,35 +8,44 @@ public class StarCluster : MonoBehaviour
 {
     public GameObject starPiece;
     public GameObject starLight;
-    private List<GameObject> stars;
+    public GameObject starDust;
 
-    private GameObject glow;
+    private List<GameObject> stars;
+    private bool collected;
 
     void Start()
     {
-        glow = Instantiate(starLight, transform.position, Quaternion.Euler(0, 0, 0), transform);
-        // StartCoroutine(glow.GetComponent<Transform>().ScaleBop());
+        stars = new List<GameObject>();
+        var glow = Instantiate(starLight, transform.position, Quaternion.Euler(0, 0, 0), transform);
+        stars.Add(glow);
 
         var pieces = (int)Random.Range(5, 9);
         var radians = 360 / pieces;
         for (int x = 0; x < pieces; x++)
         {
-            Instantiate(starPiece, transform.position, Quaternion.Euler(0, 0, x * radians), transform);
+            var star = Instantiate(starPiece, transform.position, Quaternion.Euler(0, 0, x * radians), transform);
+            stars.Add(star);
         }
     }
 
-    // Update is called once per frame
-    void Update()
+    void OnTriggerEnter2D(Collider2D collider)
     {
+        if (collider.tag == "Wubs")
+        {
+            foreach (var star in stars.Where(x => x != null))
+            {
+                StartCoroutine(SpriteHelper.FadeOut(star.GetComponentInChildren<SpriteRenderer>(), 1.0f));
+            }
 
-    }
+            if (!collected)
+            {
+                StarController.CollectStar();
+                collected = true;
+            }
 
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-        Debug.Log("collision: " + gameObject.name + " hit " + collision.collider.name);
-        // wubSource.clip = wubList[Random.Range(0, wubList.Count)];
-        // PlaySource(wubSource, 10.0f);
-
+            Instantiate(starDust, transform.position, Quaternion.Euler(0, 0, 0), transform);
+            Destroy(this.gameObject, 1.0f);
+        }
     }
 
 }

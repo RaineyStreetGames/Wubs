@@ -8,6 +8,7 @@ public class Star : MonoBehaviour
     public float xMaxScale;
     public float yMinScale;
     public float yMaxScale;
+
     private Vector3 scaleTarget;
     private Vector3 initScale;
     private bool enableScale;
@@ -19,6 +20,10 @@ public class Star : MonoBehaviour
         speed = 0.01f;
         scaleTarget = transform.localScale;
         initScale = transform.localScale;
+
+        var renderer = GetComponentInChildren<SpriteRenderer>();
+        renderer.color = new Color(renderer.color.r, renderer.color.g, renderer.color.b, 0);
+        StartCoroutine(SpriteHelper.FadeIn(renderer, 1.0f));
     }
 
     // Update is called once per frame
