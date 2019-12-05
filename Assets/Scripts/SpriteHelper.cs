@@ -11,7 +11,6 @@ public static class SpriteHelper
         {
             float a = spriteRenderer.color.a - startColor.a * Time.deltaTime / FadeTime;
             spriteRenderer.color = new Color(startColor.r, startColor.g, startColor.b, a);
-            // Debug.Log("out color a " + a);
             yield return null;
         }
     }
@@ -24,7 +23,6 @@ public static class SpriteHelper
         {
             float a = spriteRenderer.color.a + Time.deltaTime / FadeTime;
             spriteRenderer.color = new Color(startColor.r, startColor.g, startColor.b, a);
-            // Debug.Log("in color a " + a);
             yield return null;
         }
     }

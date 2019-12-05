@@ -38,6 +38,7 @@ public class Home : MonoBehaviour
         {
             displayed = false;
             cam.SetSize(8);
+            cam.minY = 0;
         }
     }
 
@@ -49,6 +50,7 @@ public class Home : MonoBehaviour
             {
                 displayed = true;
                 cam.SetSize(18);
+                cam.minY = -7;
             }
         }
     }

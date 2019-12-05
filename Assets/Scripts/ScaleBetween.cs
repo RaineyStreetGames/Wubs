@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Star : MonoBehaviour
+public class ScaleBetween : MonoBehaviour
 {
     public float xMinScale;
     public float xMaxScale;
