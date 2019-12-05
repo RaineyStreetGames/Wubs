@@ -41,11 +41,12 @@ public class StarCluster : MonoBehaviour
 
             if (!collected)
             {
+                Instantiate(starDust, transform.position, Quaternion.Euler(0, 0, 0), transform.parent);
                 StarController.CollectStar(starSource);
                 collected = true;
             }
 
-            Instantiate(starDust, transform.position, Quaternion.Euler(0, 0, 0), transform.parent);
+
             Destroy(this.gameObject, 3.75f);
         }
     }
