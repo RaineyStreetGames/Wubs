@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class Night : MonoBehaviour
 {
-
-    public CameraController cam;
-
     void Start()
     {
 
@@ -16,7 +13,7 @@ public class Night : MonoBehaviour
     {
         if (other.tag == "Wubs")
         {
-            cam.SetSize(26);
+            CameraController.TargetSize = 26;
         }
     }
 
@@ -24,7 +21,7 @@ public class Night : MonoBehaviour
     {
         if (other.tag == "Wubs")
         {
-            cam.SetSize(18);
+            CameraController.TargetSize = 18;
         }
     }
 }

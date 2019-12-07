@@ -3,7 +3,7 @@ using System.Collections;
 
 public static class SpriteHelper
 {
-    public static IEnumerator FadeOut(SpriteRenderer spriteRenderer, float FadeTime)
+    public static IEnumerator FadeOut(this SpriteRenderer spriteRenderer, float FadeTime)
     {
         Color startColor = spriteRenderer.color;
 
@@ -15,7 +15,7 @@ public static class SpriteHelper
         }
     }
 
-    public static IEnumerator FadeIn(SpriteRenderer spriteRenderer, float FadeTime)
+    public static IEnumerator FadeIn(this SpriteRenderer spriteRenderer, float FadeTime)
     {
         Color startColor = spriteRenderer.color;
 

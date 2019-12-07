@@ -6,7 +6,6 @@ public class Home : MonoBehaviour
 {
 
     public GameObject Room;
-    public CameraController cam;
 
     public bool displayed;
     public SpriteRenderer[] renderers;
@@ -37,8 +36,12 @@ public class Home : MonoBehaviour
         if (other.tag == "Wubs")
         {
             displayed = false;
-            cam.SetSize(8);
-            cam.minY = 0;
+            // foreach (var spriteRenderer in renderers)
+            // {
+            //     StartCoroutine(spriteRenderer.FadeOut(0.5f));
+            // }
+            CameraController.TargetSize = 8;
+            CameraController.MinY = 0;
         }
     }
 
@@ -49,8 +52,12 @@ public class Home : MonoBehaviour
             if (!other.IsTouching(Room.GetComponent<Collider2D>()))
             {
                 displayed = true;
-                cam.SetSize(18);
-                cam.minY = -7;
+                // foreach (var spriteRenderer in renderers)
+                // {
+                //     StartCoroutine(spriteRenderer.FadeIn(0.5f));
+                // }
+                CameraController.TargetSize = 18;
+                CameraController.MinY = -7;
             }
         }
     }

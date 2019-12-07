@@ -1,59 +1,60 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class CameraController : MonoBehaviour {
+public class CameraController : MonoBehaviour
+{
 
     public GameObject player;
-    public float minY;
-    public float maxY;
-    public float minX;
-    public float maxX;
+    public static float MinY = 0;
+    public static float MaxY = 275;
+    public static float MinX = -165;
+    public static float MaxX = 165;
+    public static float TargetSize;
 
     private Vector3 offset;
     private Camera cam;
-
     private float maxDistanceRatio = 0.5f;
     private float cameraSpeed = 0.5f;
-    private float targetSize;
 
     // Use this for initialization
-    void Start () 
+    void Start()
     {
         cam = GetComponent<Camera>();
-        targetSize = cam.orthographicSize;
+        TargetSize = cam.orthographicSize;
         //Calculate and store the offset value by getting the distance between the player's position and camera's position.
         offset = transform.position - player.transform.position;
 
         Vector3 target = player.transform.position + offset;
         transform.position = new Vector3(
-            Mathf.Clamp(target.x, minX + cam.orthographicSize, maxX - cam.orthographicSize),
-            Mathf.Clamp(target.y, minY + cam.orthographicSize, maxY - cam.orthographicSize), target.z);
+            Mathf.Clamp(target.x, MinX + cam.orthographicSize, MaxX - cam.orthographicSize),
+            Mathf.Clamp(target.y, MinY + cam.orthographicSize, MaxY - cam.orthographicSize), target.z);
     }
-    
+
     // LateUpdate is called after Update each frame
-    void LateUpdate () 
+    void LateUpdate()
     {
         Vector3 target = player.transform.position + offset;
         float targetDistance = Vector2.Distance(target, transform.position);
-        if(targetDistance >= maxDistanceRatio * cam.orthographicSize) {
+        if (targetDistance >= maxDistanceRatio * cam.orthographicSize)
+        {
             float speed = cameraSpeed;
-            if(targetDistance >= 0.9f * cam.orthographicSize) {
+            if (targetDistance >= 0.9f * cam.orthographicSize)
+            {
                 speed = speed * 2;
             }
             transform.position = Vector3.MoveTowards(transform.position, new Vector3(
-            Mathf.Clamp(target.x, minX + cam.orthographicSize * cam.aspect, maxX - cam.orthographicSize * cam.aspect),
-            Mathf.Clamp(target.y, minY + cam.orthographicSize, maxY - cam.orthographicSize), target.z), speed);
+            Mathf.Clamp(target.x, MinX + cam.orthographicSize * cam.aspect, MaxX - cam.orthographicSize * cam.aspect),
+            Mathf.Clamp(target.y, MinY + cam.orthographicSize, MaxY - cam.orthographicSize), target.z), speed);
         }
 
-        if (cam.orthographicSize <= targetSize - cameraSpeed) {
+        if (cam.orthographicSize <= TargetSize - cameraSpeed)
+        {
             cam.orthographicSize += cameraSpeed / 2.0f;
-        } else if (cam.orthographicSize >= targetSize + cameraSpeed) {
+        }
+        else if (cam.orthographicSize >= TargetSize + cameraSpeed)
+        {
             cam.orthographicSize -= cameraSpeed / 2.0f;
         }
 
-    }
-    
-    public void SetSize(float size) {
-        targetSize = size;
     }
 }
