@@ -8,7 +8,7 @@ public class StarController : MonoBehaviour
 {
     public GameObject starCluster;
     public int minX = -160;
-    public int maxX = 180;
+    public int maxX = 175;
     public int minY = 115;
     public int maxY = 270;
     public AudioClip star0;
