@@ -7,10 +7,10 @@ using UnityEngine.AI;
 public class StarController : MonoBehaviour
 {
     public GameObject starCluster;
-    public int minX = -160;
-    public int maxX = 175;
+    public int minX = -150;
+    public int maxX = 150;
     public int minY = 115;
-    public int maxY = 270;
+    public int maxY = 260;
     public AudioClip star0;
     public AudioClip star1;
     public AudioClip star2;
