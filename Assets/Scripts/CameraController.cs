@@ -13,7 +13,7 @@ public class CameraController : MonoBehaviour
 
     private Vector3 offset;
     private Camera cam;
-    private float maxDistanceRatio = 0.25f;
+    private float maxDistanceRatio = 0.15f;
     private float cameraSpeed = 0.95f;
 
     // Use this for initialization
