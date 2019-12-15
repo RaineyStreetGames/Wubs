@@ -7,8 +7,8 @@ public class CameraController : MonoBehaviour
     public GameObject player;
     public static float MinY = 0;
     public static float MaxY = 275;
-    public static float MinX = -165;
-    public static float MaxX = 165;
+    public static float MinX = -155;
+    public static float MaxX = 155;
     public static float TargetSize;
 
     private Vector3 offset;
@@ -35,7 +35,7 @@ public class CameraController : MonoBehaviour
     {
         Vector3 target = player.transform.position + offset;
         float targetDistance = Vector2.Distance(target, transform.position);
-        if (targetDistance >= maxDistanceRatio * cam.orthographicSize)
+        if (targetDistance >= maxDistanceRatio * cam.orthographicSize || cam.orthographicSize < 10)
         {
             float speed = cameraSpeed;
             if (targetDistance >= 0.9f * cam.orthographicSize)

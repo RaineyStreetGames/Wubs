@@ -34,7 +34,7 @@ public class Wubs : MonoBehaviour
         {
             flying = true;
             var dir = (Input.mousePosition - center) * targetOffset;
-            target = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x - dir.x, Input.mousePosition.y - dir.y, 0));
+            target = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x - dir.x, Input.mousePosition.y, 0));
             target = new Vector3(target.x, target.y, 0);
         }
 
