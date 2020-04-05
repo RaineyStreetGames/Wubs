@@ -26,7 +26,7 @@ public class FadeBetween : MonoBehaviour
         delayTime = Random.Range(2f, 6f);
     }
 
-    void Update()
+    void FixedUpdate()
     {
         float a = Time.deltaTime / fadeTime;
         if (fade)

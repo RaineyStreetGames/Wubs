@@ -50,7 +50,7 @@ public class CloudController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         clusters.RemoveAll(x => x == null);
 

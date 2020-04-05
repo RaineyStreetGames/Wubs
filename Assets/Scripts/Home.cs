@@ -15,7 +15,7 @@ public class Home : MonoBehaviour
         renderers = gameObject.GetComponentsInChildren<SpriteRenderer>();
     }
 
-    void Update()
+    void FixedUpdate()
     {
         float a = Time.deltaTime / 0.5f;
         foreach (SpriteRenderer sr in renderers)

@@ -28,7 +28,7 @@ public class Wubs : MonoBehaviour
         center = new Vector3(Screen.width / 2, Screen.height / 2, 0);
     }
 
-    void Update()
+    void LateUpdate()
     {
         if (Input.GetMouseButton(0))
         {

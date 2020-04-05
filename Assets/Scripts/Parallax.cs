@@ -15,7 +15,7 @@ public class Parallax : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         var parallax = ((lastpos - target.transform.position) * speed);
         transform.position -= new Vector3(parallax.x, 0, 0);

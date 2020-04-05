@@ -35,7 +35,7 @@ public class StarController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         stars.RemoveAll(x => x == null);
 

@@ -27,7 +27,7 @@ public class ScaleBetween : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         transform.localScale = Vector3.MoveTowards(transform.localScale, scaleTarget, speed);
 
