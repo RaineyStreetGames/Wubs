@@ -54,8 +54,8 @@ public class Wubs : MonoBehaviour
         }
         else
         {
-            rb.velocity = Vector2.MoveTowards(rb.velocity, Vector2.zero, 5);
-            rb.angularVelocity = rb.velocity.x;
+            rb.linearVelocity = Vector2.MoveTowards(rb.linearVelocity, Vector2.zero, 5);
+            rb.angularVelocity = rb.linearVelocity.x;
         }
     }
 
